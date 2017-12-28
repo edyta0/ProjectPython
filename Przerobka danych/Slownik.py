@@ -3,7 +3,7 @@ import pprint
 
 slownik = {};
 i = 1;
-with open('bazacsv.csv') as csvfile:
+with open('baza.csv') as csvfile:
      reader = csv.DictReader(csvfile)
      for row in reader:
          slownik[i] = {'title' : row['title'],
