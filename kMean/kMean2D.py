@@ -275,4 +275,11 @@ plt.scatter(tC1X, tC1Y, c = '#9b0000', marker = '*', s = 250)
 plt.scatter(tC2X, tC2Y, c = '#1c3900', marker = '*', s = 250)
 plt.ylabel(osOy)
 plt.xlabel(osOx)
+from mpl_toolkits.mplot3d import Axes3D
+
+fig = plt.figure()
+ax = Axes3D(fig)
+ax.set_xticks([0., 0.5, 1.])
 plt.show()
+
+

@@ -36,10 +36,54 @@ with open('baza.csv') as csvfile:
          i = i + 1;
 # pprint.pprint(slownikDane);
 
+# ******************************************
+# castowanie danych
+# ******************************************
+gatunkiR = []
+gatunki = []
+for key in slownikDane:
+    rekord = slownikDane[key]['genre'];
+    gatunkiR.append(rekord)
+
+gatunki = list(set(gatunkiR))
+print(gatunki)
+
+# castowanie
+for key in slownikDane:
+    gatunek = slownikDane[key]['genre'];
+    if gatunek == gatunki[0]:
+        slownikDane[key]['genre'] = 0
+    if gatunek == gatunki[1]:
+        slownikDane[key]['genre'] = 1
+    if gatunek == gatunki[2]:
+        slownikDane[key]['genre'] = 2
+    if gatunek == gatunki[3]:
+        slownikDane[key]['genre'] = 3
+    if gatunek == gatunki[4]:
+        slownikDane[key]['genre'] = 4
+    if gatunek == gatunki[5]:
+        slownikDane[key]['genre'] = 5
+    if gatunek == gatunki[6]:
+        slownikDane[key]['genre'] = 6
+    if gatunek == gatunki[7]:
+        slownikDane[key]['genre'] = 7
+    if gatunek == gatunki[8]:
+        slownikDane[key]['genre'] = 8
+    if gatunek == gatunki[9]:
+        slownikDane[key]['genre'] = 9
+    if gatunek == gatunki[10]:
+        slownikDane[key]['genre'] = 10
+    if gatunek == gatunki[11]:
+        slownikDane[key]['genre'] = 11
+
+print("aaaaaaaaaa", slownikDane)
+
+
+
 listaPunktow = [];
-osOz = 'oscar_nom'
-osOx = 'want_fwb'
-osOy = 'rate_fwb'
+osOz = 'want_fwb'
+osOx = 'votes_fwb'
+osOy = 'votes_imdb'
 
 for key in slownikDane:
     rekordWartosci = [];
@@ -319,3 +363,5 @@ ax.set_xlabel(osOx)
 ax.set_ylabel(osOy)
 ax.set_zlabel(osOz)
 pyplot.show()
+
+
